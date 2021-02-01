@@ -1,6 +1,6 @@
 import VueRouter from "vue-router";
-import Home from "./views/Home";
-import Hello from "./views/Hello";
+import Home from "../js/pages/catalog-page";
+import orderBasket from "../js/pages/basket-page";
 
 const router = new VueRouter({
     mode: 'history',
@@ -11,9 +11,10 @@ const router = new VueRouter({
             component: Home
         },
         {
-            path: '/hello',
-            name: 'hello',
-            component: Hello,
+            path: '/basket',
+            name: 'basket',
+            component: orderBasket,
+            props: true
         },
     ],
 });

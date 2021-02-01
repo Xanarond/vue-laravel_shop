@@ -1,22 +1,24 @@
 <template>
-    <div>
-        <h1>Vue Router Demo App</h1>
-        <p>
-            <router-link :to="{ name: 'home' }">Home</router-link>
-            |
-            <router-link :to="{ name: 'hello' }">Hello World</router-link>
-        </p>
+    <div id="app">
+        <Navbar/>
         <div class="container">
             <router-view></router-view>
         </div>
+        <Footer/>
     </div>
 </template>
 <script>
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 export default {
-    name: "App"
+    name: "app",
+    components: {Footer, Navbar}
 }
 </script>
 
-<style scoped>
-
+<style>
+body {
+    background-color: #121220;
+}
 </style>
